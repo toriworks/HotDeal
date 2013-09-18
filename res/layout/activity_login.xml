@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/image_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/ic_launcher" />
+
+    <EditText
+        android:id="@+id/edit_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/image_logo"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="이메일 주소 입력"
+        android:inputType="textEmailAddress"
+        android:textSize="@dimen/mid_text_font_size" >
+    </EditText>
+
+    <EditText
+        android:id="@+id/edit_passwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/edit_email"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="비밀번호 입력"
+        android:inputType="textPassword"
+        android:textSize="@dimen/mid_text_font_size" />
+
+    <Button
+        android:id="@+id/button_log_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="Log In"
+        android:textSize="@dimen/default_button_font_size" />
+
+    <TextView
+        android:id="@+id/text_or_guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_log_in"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="소셜 로그인으로 로그인"
+        android:textSize="@dimen/small_text_font_size" />
+
+    <LinearLayout
+        android:id="@+id/linear_social_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_or_guide"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp" >
+
+        <Button
+            android:id="@+id/button_social_facebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="F"
+            android:textSize="@dimen/default_button_font_size" />
+
+        <Button
+            android:id="@+id/button_social_twitter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="T"
+            android:textSize="@dimen/default_button_font_size" />
+
+        <Button
+            android:id="@+id/button_social_google"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="G"
+            android:textSize="@dimen/default_button_font_size" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_guide_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_below="@+id/edit_email"
+        android:text="이메일 형식이 맞지 않습니다." 
+        android:textSize="@dimen/small_text_font_size"/>
+
+    <TextView
+        android:id="@+id/text_guide_passwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_below="@+id/edit_passwd"
+        android:text="비밀번호 형식이 맞지 않습니다." 
+		android:textSize="@dimen/small_text_font_size"/>
+
+    <Button
+        android:id="@+id/button_guide_login"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignTop="@+id/text_or_guide"
+        android:layout_toRightOf="@+id/text_or_guide"
+        android:text="Q" />
+
+</RelativeLayout>

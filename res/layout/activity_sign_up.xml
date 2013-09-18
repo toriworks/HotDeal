@@ -1,0 +1,260 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpActivity" >
+
+    <!-- 로고 위치 -->
+
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:src="@drawable/ic_launcher"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"/>
+
+    <!-- 가입 화면 위치 -->
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView"
+            android:fadingEdge="none">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="30dp">
+
+            <LinearLayout
+                    android:id="@+id/linear_social"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                <Button
+                        android:id="@+id/button_social_facebook"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="F"
+                        android:textSize="@dimen/default_button_font_size" />
+
+                <Button
+                        android:id="@+id/button_social_twitter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="T"
+                        android:textSize="@dimen/default_button_font_size" />
+
+                <Button
+                        android:id="@+id/button_social_google"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="G"
+                        android:textSize="@dimen/default_button_font_size" />
+            </LinearLayout>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/linear_social"
+                    android:layout_marginTop="20dp"
+                    android:text="이름"
+                    android:textSize="@dimen/default_text_font_size"
+                    android:textStyle="bold"
+                    android:id="@+id/text_name_label"
+                    android:layout_alignParentLeft="true" />
+
+            <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edit_name"
+                    android:hint="이름을 입력하세요."
+                    android:layout_below="@+id/text_name_label"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:textSize="@dimen/mid_text_font_size" />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="별명"
+                    android:textSize="@dimen/default_text_font_size"
+                    android:textStyle="bold"
+                    android:id="@+id/text_nick_label"
+                    android:layout_marginTop="15dp"
+                    android:layout_below="@+id/edit_name"
+                    android:layout_alignParentLeft="true"/>
+
+            <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edit_nick"
+                    android:hint="별명은 최대한 재밌게 지어주세요."
+                    android:layout_below="@+id/text_nick_label"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:textSize="@dimen/mid_text_font_size" />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="비밀번호"
+                    android:textSize="@dimen/default_text_font_size"
+                    android:textStyle="bold"
+                    android:id="@+id/text_passwd_label"
+                    android:layout_marginTop="15dp"
+                    android:layout_below="@+id/edit_nick"
+                    android:layout_alignParentLeft="true"/>
+
+            <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edit_passwd"
+                    android:hint="최소 6자 이상으로 입력하세요."
+                    android:layout_below="@+id/text_passwd_label"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:textSize="@dimen/mid_text_font_size" />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="이메일 주소"
+                    android:textSize="@dimen/default_text_font_size"
+                    android:textStyle="bold"
+                    android:id="@+id/text_email_label"
+                    android:layout_marginTop="15dp"
+                    android:layout_below="@+id/edit_passwd"
+                    android:layout_alignParentLeft="true"/>
+
+            <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edit_email"
+                    android:hint="사용중인 메일주소로 입력하세요."
+                    android:layout_below="@+id/text_email_label"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:textSize="@dimen/mid_text_font_size" />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="성별"
+                    android:textSize="@dimen/default_text_font_size"
+                    android:textStyle="bold"
+                    android:id="@+id/text_gender_label"
+                    android:layout_marginTop="15dp"
+                    android:layout_below="@+id/edit_email"
+                    android:layout_alignParentLeft="true"/>
+
+            <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="여자"
+                    android:textSize="@dimen/mid_text_font_size"
+                    android:id="@+id/radio_gender_woman"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/text_gender_label"
+                    android:layout_alignParentLeft="true" />
+
+            <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="남자"
+                    android:textSize="@dimen/mid_text_font_size"
+                    android:id="@+id/radio_gender_man"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@+id/text_gender_label"
+                    android:layout_toRightOf="@+id/radio_gender_woman"/>
+
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="계정생성"
+                    android:id="@+id/button_enroll"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/radio_gender_woman"
+                    android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="다음의"
+                android:textSize="@dimen/tiny_text_font_size"
+                android:layout_below="@+id/button_enroll"
+                android:id="@+id/text_dummy_1"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="개인정보보호정책"
+                    android:textSize="@dimen/tiny_text_font_size"
+                    android:textStyle="bold"
+                    android:id="@+id/text_link_act1"
+                    android:layout_marginLeft="5dp"
+                    android:layout_below="@+id/button_enroll"
+                    android:layout_marginTop="30dp"
+                    android:layout_toRightOf="@+id/text_dummy_1"
+                    android:linksClickable="true"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text=", "
+                    android:textSize="@dimen/tiny_text_font_size"
+                    android:layout_below="@+id/button_enroll"
+                    android:layout_toRightOf="@+id/text_link_act1"
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/text_dummy_2"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="이용약관"
+                    android:textSize="@dimen/tiny_text_font_size"
+                    android:textStyle="bold"
+                    android:id="@+id/text_link_act2"
+                    android:layout_marginLeft="5dp"
+                    android:layout_below="@+id/button_enroll"
+                    android:layout_marginTop="30dp"
+                    android:layout_toRightOf="@+id/text_dummy_2"
+                    android:linksClickable="true"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="을 확인해보세요."
+                    android:textSize="@dimen/tiny_text_font_size"
+                    android:layout_below="@+id/button_enroll"
+                    android:layout_toRightOf="@+id/text_link_act2"
+                    android:layout_marginLeft="5dp"
+                    android:id="@+id/text_dummy_3"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/text_dummy_3" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

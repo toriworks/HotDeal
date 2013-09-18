@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+    <!-- 알림 센터 -->
+    <Button android:id="@+id/button_notice"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@drawable/ic_notice"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp"/>
+
+    <!-- 메뉴 보이기/숨기기 -->
+    <Button android:id="@+id/button_menu"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@drawable/ic_action_collections_view_as_grid"
+            android:layout_alignTop="@+id/button_notice"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dp"/>
+
+    <!-- 글쓰기 -->
+    <Button android:id="@+id/button_write"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@drawable/ic_action_content_edit"
+            android:layout_toLeftOf="@+id/button_menu"
+            android:layout_alignTop="@+id/button_menu"
+            android:layout_marginRight="10dp"/>
+
+    <!-- 클리핑으로 글쓰기 -->
+    <Button android:id="@+id/button_clip"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@drawable/ic_action_content_attachment"
+            android:layout_toLeftOf="@+id/button_write"
+            android:layout_alignTop="@+id/button_menu"
+            android:layout_marginRight="10dp"/>
+
+    <!-- 사진첨부 글쓰기 -->
+    <Button android:id="@+id/button_pic"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@drawable/ic_action_device_access_camera"
+            android:layout_toLeftOf="@+id/button_clip"
+            android:layout_alignTop="@+id/button_menu"
+            android:layout_marginRight="10dp"/>
+
+</RelativeLayout>

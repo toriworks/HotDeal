@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relative_notification_data"
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+
+    <ImageView
+        android:id="@+id/image_profile"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" 
+        android:background="@android:color/black" />
+
+    <TextView
+        android:id="@+id/text_profile_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/image_profile"
+        android:text="대한민국토리" 
+        android:textSize="@dimen/mid_text_font_size"/>
+
+    <TextView
+        android:id="@+id/text_notification_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/image_profile"
+        android:layout_alignLeft="@+id/text_profile_name"
+        android:layout_alignParentRight="true"
+        android:text="간만에 청담동 브런치. 이 시간에 벌써 여자들 수다소리..."
+        android:textSize="@dimen/tiny_text_font_size" />
+
+    <TextView
+        android:id="@+id/text_notification_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/text_profile_name"
+        android:layout_alignBottom="@+id/text_profile_name"
+        android:layout_alignParentRight="true"
+        android:text="7월 11일 오전 11:32" 
+        android:textSize="@dimen/tiny_text_font_size"/>
+
+    <View
+        android:id="@+id/view_dummy_line"
+        android:layout_width="wrap_content"
+        android:layout_height="1sp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="#999999" />
+
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 프로필 정보 -->
+    <item
+            android:id="@+id/menu_profile"
+            android:icon="@drawable/ic_person"
+            android:showAsAction="always"
+            android:orderInCategory="0"/>
+    <!-- 알림센터 -->
+    <item
+            android:id="@+id/menu_notification"
+            android:icon="@drawable/ic_notice"
+            android:showAsAction="always"
+            android:orderInCategory="1"/>
+    <!-- 검색 -->
+    <item
+            android:id="@+id/menu_search"
+            android:icon="@drawable/ic_action_action_search"
+            android:showAsAction="always"
+            android:orderInCategory="2"
+            android:actionViewClass="android.widget.SearchView"/>
+    <!-- 도움말 -->
+    <item
+            android:id="@+id/menu_help"
+            android:title="도움말"
+            android:orderInCategory="3"
+            android:showAsAction="never"/>
+    <!-- 설정 -->
+    <item
+            android:id="@+id/menu_settings"
+            android:title="설정"
+            android:orderInCategory="4"
+            android:showAsAction="never"/>
+</menu>

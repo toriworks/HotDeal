@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="default_button_font_size">14sp</dimen>
+    <dimen name="small_button_font_size">12sp</dimen>
+
+    <dimen name="large_text_font_size">20sp</dimen>
+    <dimen name="default_text_font_size">16sp</dimen>
+    <dimen name="mid_text_font_size">15sp</dimen>
+    <dimen name="small_text_font_size">14sp</dimen>
+    <dimen name="tiny_text_font_size">12sp</dimen>
+
+</resources>

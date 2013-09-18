@@ -1,0 +1,8 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 배경색 -->
+    <solid android:color="@android:color/white"/>
+    <!-- 선 색 -->
+    <stroke android:width="0.7dp" android:color="#778899"/>
+    <!-- 코너 꺾임 각도 -->
+    <corners android:radius="3.5dp"/>
+</shape>

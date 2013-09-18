@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">HOT DEAL</string>
+    <string name="menu_settings">Settings</string>
+
+    
+    <!-- Main splash activity -->
+    <string name="splash_signup">회원가입</string>
+    <string name="splash_login">로그인</string>
+
+    <!-- 메인 탭 메뉴 -->
+    <string-array name="main_tab_menu">
+        <item>국내 핫딜</item>
+        <item>해외 핫딜</item>
+        <item>Q&amp;A</item>
+        <item>이벤트</item>
+    </string-array>
+
+    <!-- 프로필 공지 메세지 -->
+    <string-array name="profile_notice_step">
+        <item>프로필 사진이 비었네요.</item>
+        <item>추가정보를 입력하세요.</item>
+        <item>다른 친구들과 함께해요.</item>
+    </string-array>
+    <string-array name="profile_notice_step_desc">
+        <item>지금 바로 나를 표현하는 사진을 올려보세요.</item>
+        <item>나를 더 돋보이게 하는 추가 정보를 올려보세요.</item>
+        <item>이제 친구들과 함께 핫딜을 해보는건 어때요?</item>
+    </string-array>
+
+    <!-- 메인 액티비티 바탕 컬러 -->
+    <color name="act_main_bg">#ECECEC</color>
+    <!-- Follow 선택 컬러 -->
+    <color name="dft_follow_bg">#F0F0F0</color>
+    <!-- 기본 폰트 컬러 -->
+    <color name="dft_font_color">#757575</color>
+    <!-- 흐린 기본 폰트 컬러 -->
+    <color name="dft_light_font_color">#9C9C9C</color>
+    <!-- 더보기 텍스트 버튼 배경 -->
+    <color name="dft_vmore_bg">#999999</color>
+</resources>
