@@ -1,13 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- 버튼 관련 크기 설정 -->
     <dimen name="default_button_font_size">14sp</dimen>
     <dimen name="small_button_font_size">12sp</dimen>
 
+    <!-- 문자열 관련 크기 설정 -->
     <dimen name="large_text_font_size">20sp</dimen>
     <dimen name="default_text_font_size">16sp</dimen>
     <dimen name="mid_text_font_size">15sp</dimen>
     <dimen name="small_text_font_size">14sp</dimen>
     <dimen name="tiny_text_font_size">12sp</dimen>
+
+    <!-- Pull-to-Refresh 관련 크기 설정 -->
+    <dimen name="indicator_right_padding">10dp</dimen>
+    <dimen name="indicator_corner_radius">12dp</dimen>
+    <dimen name="indicator_internal_padding">4dp</dimen>
+    <dimen name="header_footer_left_right_padding">24dp</dimen>
+    <dimen name="header_footer_top_bottom_padding">12dp</dimen>
+    <dimen name="slidingmenu_offset">130dp</dimen>
+    <dimen name="list_padding">10dp</dimen>
+    <dimen name="shadow_width">5dp</dimen>
+    <integer name="num_cols">1</integer>
 
 </resources>

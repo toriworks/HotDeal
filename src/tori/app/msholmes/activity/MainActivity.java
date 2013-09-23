@@ -19,6 +19,7 @@ import android.widget.SearchView;
 import android.widget.Toast;
 
 import tori.app.msholmes.R;
+import tori.app.msholmes.activity.feed.WriteActivity;
 import tori.app.msholmes.activity.fragment.AbroadFragment;
 import tori.app.msholmes.activity.fragment.DomesticFragment;
 import tori.app.msholmes.activity.fragment.MoreFragment;
@@ -26,6 +27,7 @@ import tori.app.msholmes.activity.fragment.QnAFragment;
 import tori.app.msholmes.activity.guide.GuideActivity;
 import tori.app.msholmes.activity.guide.HelpActivity;
 import tori.app.msholmes.activity.profile.ProfileActivity;
+import tori.app.msholmes.utils.HCallback;
 import tori.app.msholmes.utils.listener.TabListener;
 
 /**
@@ -33,7 +35,7 @@ import tori.app.msholmes.utils.listener.TabListener;
  * <p/>
  * Created by toriworks on 13. 7. 17..
  */
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements HCallback {
 
     /** 알림 센터 */
     private static Button buttonNotice;
@@ -108,68 +110,6 @@ public class MainActivity extends Activity {
         outState.putInt("tab", getActionBar().getSelectedNavigationIndex());
     }
 
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        getMenuInflater().inflate(R.menu.activity_main, menu);
-//
-//        // 검색 이벤트 처리
-//        SearchView searchView = (SearchView) menu.findItem(R.id.menu_search).getActionView();
-//        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-//            @Override
-//            public boolean onQueryTextSubmit(String s) {
-//                // 검색어를 모두 입력 후에 검색 버튼이 눌린 경우 호출되는 이벤트
-//                Log.d("nine", "onQueryTextSubmit:" + s + "<END");
-//                return false;
-//            }
-//
-//            @Override
-//            public boolean onQueryTextChange(String s) {
-//                // 검색어가 입력되는 도중에 호출되는 이벤트
-//                Log.d("nine", "onQueryTextChange:" + s + "<END");
-//                return false;
-//            }
-//        });
-//
-//        return super.onCreateOptionsMenu(menu);
-//    }
-//
-//    /**
-//     * 옵션 메뉴가 선택되면 호출된다.
-//     * <p/>
-//     * 선택된 옵션 메뉴에서 아이디를 추출하여, 하위 메뉴로 이동 할 수 있도록 합니다.
-//     *
-//     * @param item 선택된 옵션 메뉴
-//     * @return
-//     */
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        int mId = item.getItemId();
-//        switch (mId) {
-//            // 프로필 메뉴가 선택
-//            case R.id.menu_profile:
-//                Log.d("nine", "프로필 선택");
-//                Intent profileIntent = new Intent(this, ProfileActivity.class);
-//                startActivity(profileIntent);
-//                overridePendingTransition(R.anim.anim_window_in, R.anim.anim_window_out);
-//                break;
-//            case R.id.menu_notification:
-//                Log.d("nine", "알림센터 선택");
-//                break;
-//            case R.id.menu_help:
-//                Log.d("nine", "도움말 선택");
-//                Intent helpIntent = new Intent(this, HelpActivity.class);
-//                startActivity(helpIntent);
-//                overridePendingTransition(R.anim.anim_window_in, R.anim.anim_window_out);
-//                break;
-//            case R.id.menu_settings:
-//                Log.d("nine", "설정 선택");
-//                break;
-//            default:
-//                break;
-//        }
-//        return super.onOptionsItemSelected(item);
-//    }
-
     /*
      * (non-Javadoc)
      *
@@ -235,6 +175,9 @@ public class MainActivity extends Activity {
 
         // 버튼에 이벤트 부여
         buttonMenu.setOnClickListener(new ButtonOnClickListener());
+        buttonWrite.setOnClickListener(new ButtonOnClickListener());
+        buttonClip.setOnClickListener(new ButtonOnClickListener());
+        buttonPic.setOnClickListener(new ButtonOnClickListener());
     }
 
     /**
@@ -247,25 +190,25 @@ public class MainActivity extends Activity {
         bar.addTab(
                 bar.newTab()
                         .setIcon(arrMainTabMenuIcon[0])
-                        .setTabListener(new TabListener<DomesticFragment>(this, "tab1", DomesticFragment.class)));
+                        .setTabListener(new TabListener<DomesticFragment>(this, "tab1", DomesticFragment.class, this)));
 
         // 해외 핫딜 Fragment 설정
         bar.addTab(
                 bar.newTab()
                         .setIcon(arrMainTabMenuIcon[1])
-                        .setTabListener(new TabListener<AbroadFragment>(this, "tab2", AbroadFragment.class)));
+                        .setTabListener(new TabListener<AbroadFragment>(this, "tab2", AbroadFragment.class, this)));
 
         // Q&A Fragment 설정
         bar.addTab(
                 bar.newTab()
                         .setIcon(arrMainTabMenuIcon[2])
-                        .setTabListener(new TabListener<QnAFragment>(this, "tab3", QnAFragment.class)));
+                        .setTabListener(new TabListener<QnAFragment>(this, "tab3", QnAFragment.class, this)));
 
         // More Fragement 설정
         bar.addTab(
                 bar.newTab()
                         .setIcon(arrMainTabMenuIcon[3])
-                        .setTabListener(new TabListener<MoreFragment>(this, "tab4", MoreFragment.class)));
+                        .setTabListener(new TabListener<MoreFragment>(this, "tab4", MoreFragment.class, this)));
     }
 
     /**
@@ -310,6 +253,16 @@ public class MainActivity extends Activity {
         buttonMenu.setBackgroundResource(menuShowHideDrawable[(bShowMenu) ? 1 : 0]);
     }
 
+    @Override
+    public void tabSelected(String tabName) {
+        // 네번째 탭이 선택되면 상단의 메뉴를 숨김
+        if(null != buttonMenu) {
+            // TODO : ----------------------------------------
+
+
+        }
+    }
+
     /**
      * 화면내 버튼 역할을 수행하는 컴포넌트의 클릭 이벤트 처리 클래스
      */
@@ -329,12 +282,22 @@ public class MainActivity extends Activity {
                     toggleMenu();
                     break;
                 case R.id.button_write:
+                    // 메뉴 숨기기
+                    toggleMenu();
 
+                    // 새 글작성 화면으로 이동
+                    Intent writeIntent = new Intent(MainActivity.this, WriteActivity.class);
+                    startActivity(writeIntent);
+                    overridePendingTransition(R.anim.anim_window_in, R.anim.anim_window_out);
                     break;
                 case R.id.button_clip:
+                    // 메뉴 숨기기
+                    toggleMenu();
 
                     break;
                 case R.id.button_pic:
+                    // 메뉴 숨기기
+                    toggleMenu();
 
                     break;
                 default:

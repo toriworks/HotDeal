@@ -28,13 +28,18 @@ public interface HContants {
 	String SUCCESS = "T";
 	/** FAIL */
 	String FAIL = "F";
-
+    /** 새로고침(위) */
+    int LOAD_REFRESH = 0;
+    /** 새로고치(더 보기) */
+    int LOAD_MORE = 1;
 
     // ************************************************************************
     // 서비스 연동
     // ************************************************************************
 	/** API 엔드포인트 */
 	String API_ENDPOINT = "http://192.168.123.121:8080/";
+    /** Google Play Link */
+    String GOOGLE_PLAY_LINK = "market://details?id=tori.app.msholmes";
     /** GCM용 디바이스 고유 아이디 */
     String SP_DEVICE_UDID = "sp.device.udid";
 }

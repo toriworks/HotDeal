@@ -12,7 +12,7 @@ public interface UserService {
 	 * @param email
 	 * @return
 	 */
-	@GET("/account/check_email/{email}/{passwd}")
-	JsonObject checkEmail(@Path("email") String email, @Path("passwd") String passwd);
+	@GET("/account/check_email/{email}")		
+	JsonObject checkEmail(@Path("email") String email);
 	
 }

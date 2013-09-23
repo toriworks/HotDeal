@@ -34,25 +34,170 @@
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="01.05.02"
+                android:text="^00.00.00"
                 android:id="@+id/text_now_version"
                 android:layout_toRightOf="@+id/text_lbl_version"
                 android:layout_centerVertical="true"
-                android:textColor="@color/dft_font_color"
+                android:textStyle="bold"
+                android:textColor="@color/dft_red_font_color"
                 android:textSize="@dimen/mid_text_font_size"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/relative_upgrade_check"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="left|center_vertical">
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="업그레이드가 있습니다."
-                android:id="@+id/text_upgrade"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:background="#2d3d4d"
+                android:text="버전 확인중..."
+                android:gravity="right"
+                android:id="@+id/text_upgrade_checking"
                 android:padding="5dp"
                 android:textColor="@color/dft_font_color"
-                android:textSize="@dimen/small_text_font_size" />
+                android:textSize="@dimen/small_text_font_size"
+                android:layout_toLeftOf="@+id/progress_upgrade_check" android:layout_centerVertical="true"/>
+
+        <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/progress_upgrade_check" android:layout_gravity="center"
+                android:layout_alignParentRight="true" android:layout_alignParentTop="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/relative_upgrade_available"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="left|center_vertical"
+            android:visibility="gone">
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/image_google_link"
+                android:src="@drawable/en_app_rgb_wo_45"
+                android:layout_alignParentRight="true"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="업데이트가 있습니다.(01.00.00)"
+                android:gravity="right"
+                android:id="@+id/text_upgrade_version"
+                android:padding="5dp"
+                android:textColor="@color/dft_font_color"
+                android:textSize="@dimen/small_text_font_size"
+                android:layout_toLeftOf="@+id/image_google_link" android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"/>
+    </RelativeLayout>
+    <RelativeLayout
+            android:id="@+id/relative_account_link"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_corner"
+            android:padding="5dp">
+
+        <Button
+                android:id="@+id/button_account_link"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/ic_action_navigation_next_item"/>
+
+        <TextView
+                android:id="@+id/text_lbl_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp"
+                android:text="계정정보"
+                android:textColor="@color/dft_font_color"
+                android:textSize="@dimen/mid_text_font_size"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/relative_noti_link"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_corner"
+            android:padding="5dp">
+
+        <Button
+                android:id="@+id/button_noti_link"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/ic_action_navigation_next_item"/>
+
+        <TextView
+                android:id="@+id/text_lbl_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp"
+                android:text="알림상세설정"
+                android:textColor="@color/dft_font_color"
+                android:textSize="@dimen/mid_text_font_size"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/relative_guide_link"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_corner"
+            android:padding="5dp">
+
+        <Button
+                android:id="@+id/button_guide_link"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/ic_action_navigation_next_item"/>
+
+        <TextView
+                android:id="@+id/text_lbl_guide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp"
+                android:text="앱 둘러보기"
+                android:textColor="@color/dft_font_color"
+                android:textSize="@dimen/mid_text_font_size"/>
+    </RelativeLayout>
 
 
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp">
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/image_logo"
+                android:src="@drawable/ic_launcher"
+                android:layout_centerHorizontal="true" android:layout_alignParentTop="true"/>
     </RelativeLayout>
 
 </LinearLayout>

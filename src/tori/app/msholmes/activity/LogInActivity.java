@@ -24,10 +24,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import com.google.gson.JsonPrimitive;
 
 public class LogInActivity extends Activity {
 
@@ -177,11 +175,8 @@ public class LogInActivity extends Activity {
                     .setServer(HContants.API_ENDPOINT)
                     .build();
 
-            Log.d("holmes", "보내는값[" + editEmail.getText() + "," + editPasswd.getText() + "]");
-
             UserService service = restAdapter.create(UserService.class);
-            JsonObject json = service.checkEmail(HCommonUtil.getStringWithSafe(editEmail.getText()),
-                    HCommonUtil.getStringWithSafe(editPasswd.getText()));
+            JsonObject json = service.checkEmail("toriworks@gmail.com");
             Log.d("holmes", "" + json.toString());
             Log.d("holmes", ">>" + json.get("result") + "<<");
 
@@ -190,14 +185,6 @@ public class LogInActivity extends Activity {
 
             if (HContants.SUCCESS.equals(result)) {
                 // 응답이 성공인 경우
-                JsonArray arrData = json.getAsJsonArray("data");
-                JsonObject countObj = arrData.get(0).getAsJsonObject();
-
-                JsonPrimitive countVal = countObj.getAsJsonPrimitive("count");
-
-                Log.d("holmes", ">>countResult:" + arrData.toString() + ", " + countVal + "<<END");
-
-
                 Intent mainIntent = new Intent(LogInActivity.this, MainActivity.class);
                 startActivity(mainIntent);
                 overridePendingTransition(R.anim.anim_window_in, R.anim.anim_window_out);
@@ -208,7 +195,6 @@ public class LogInActivity extends Activity {
 
         } catch (Exception e) {
             Log.e("holmes", ">>>>>" + e.toString());
-            e.printStackTrace();
             mHandler.sendEmptyMessage(500);
 
             // FIXME : 강제로 다음 액티비티로 이동하게 함

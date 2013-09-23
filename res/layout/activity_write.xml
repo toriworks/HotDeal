@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/linear_write_bg"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <!-- 자리잡기용 더미 뷰 -->
+    <View
+            android:id="@+id/view_dummy_top_line"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="10dp"/>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/rounded_corner"
+            android:padding="5dp">
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:paddingTop="20sp"
+                android:hint="글 제목"
+                android:id="@+id/edit_title"
+                android:maxLength="300"
+                android:inputType="textFilter"
+                android:textSize="@dimen/mid_text_font_size" android:gravity="top"/>
+
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/edit_contents"
+                android:hint="글 내용"
+                android:maxLength="1000"
+                android:maxLines="10"
+                android:lines="10"
+                android:inputType="textFilter|textMultiLine"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/edit_title"
+                android:paddingTop="20sp"
+                android:textSize="@dimen/mid_text_font_size" android:gravity="top"
+                android:layout_alignRight="@+id/edit_title"/>
+
+        <!-- 항목 미입력 시 보여줄 뷰 -->
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10sp"
+                android:paddingRight="10sp"
+                android:text="글 제목을 입력해 주세요."
+                android:textSize="@dimen/mid_text_font_size"
+                android:id="@+id/text_toast_title"
+                android:layout_alignLeft="@+id/edit_title"
+                android:layout_below="@+id/edit_title"
+                android:visibility="gone" />
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10sp"
+                android:paddingRight="10sp"
+                android:text="글 내용을 입력해 주세요."
+                android:textSize="@dimen/mid_text_font_size"
+                android:id="@+id/text_toast_contents"
+                android:layout_alignLeft="@+id/edit_contents"
+                android:layout_below="@+id/edit_contents"
+                android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@android:color/transparent"
+            android:paddingTop="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="3dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="3dp"
+                android:text="구분선택"
+                android:textSize="@dimen/small_text_font_size" android:id="@+id/textView"/>
+        <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/small_text_font_size"
+                android:id="@+id/spinner_gubun"
+                android:drawSelectorOnTop="false"
+                android:layout_toRightOf="@+id/textView"
+                android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@android:color/transparent"
+            android:paddingTop="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="3dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="3dp"
+                android:text="웹 페이지를 링크하려면 입력"
+                android:textSize="@dimen/small_text_font_size"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:padding="5dp">
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:hint="웹 링크 주소 입력"
+                android:id="@+id/edit_link"
+                android:maxLength="300"
+                android:inputType="textFilter"
+                android:textSize="@dimen/mid_text_font_size" android:gravity="top"/>
+    </RelativeLayout>
+
+    <!-- RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@android:color/transparent"
+            android:paddingTop="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="3dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="3dp"
+                android:text="태그는 쉼표(,) 또는 띄어쓰기로 구분해서 입력"
+                android:textSize="@dimen/small_text_font_size"/>
+
+    </RelativeLayout -->
+
+    <!-- RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:padding="5dp">
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:hint="태그를 입력"
+                android:id="@+id/edit_tags"
+                android:maxLength="300"
+                android:inputType="textFilter"
+                android:textSize="@dimen/mid_text_font_size" android:gravity="top"/>
+    </RelativeLayout -->
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:padding="5dp">
+        <ImageView
+                android:id="@+id/image_take_picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_action_device_access_camera" android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

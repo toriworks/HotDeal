@@ -29,19 +29,7 @@ public class HCommonUtil {
      */
     public static String getStringWithSafe(String target) {
         StringBuilder sb = new StringBuilder();
-        sb.append("").append(target);
-
-        return sb.toString();
-    }
-
-    /**
-     * 안전한 문자열을 만든다.
-     * @param target 대상 문자열
-     * @return 안전한 문자열
-     */
-    public static String getStringWithSafe(CharSequence target) {
-        StringBuilder sb = new StringBuilder();
-        sb.append("").append(target);
+        sb.append("").append(target.trim());
 
         return sb.toString();
     }

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_corner">
+
+    <!-- 국내/국외/Q&A 구분 -->
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="15dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingRight="5dp"
+            android:text="국내핫딜"
+            android:id="@+id/text_gubun"
+            android:textSize="@dimen/tiny_text_font_size"
+            android:textColor="@color/dft_red_font_color"
+            android:textStyle="bold"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"/>
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/image_hot" android:layout_toRightOf="@+id/text_gubun"
+            android:layout_alignTop="@+id/text_gubun"
+            android:src="@drawable/ic_like"/>
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:id="@+id/image_like"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/ic_like"/>
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:id="@+id/image_clip"
+            android:layout_toLeftOf="@+id/image_like"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/ic_like"/>
+
+    <View
+            android:id="@+id/view_dummy_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@+id/text_gubun"
+            android:background="@color/dft_follow_bg"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="살아보니 성격 무난한 남편이 최고인거같아요.ㅎ"
+            android:textSize="@dimen/default_text_font_size"
+            android:textColor="@color/dft_font_color"
+            android:paddingLeft="15dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingRight="15dp"
+            android:id="@+id/text_title"
+            android:layout_alignLeft="@+id/text_gubun"
+            android:layout_below="@+id/view_dummy_line"
+            android:layout_alignRight="@+id/image_attach"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2일 일본 파파라치 전문매체 프라이데이는 카세 료와 정은채가 일본 시내에서 함께 데이트를 하고 있는 모습을 포착해 보도했다.사진 속 두 사람은 니시아자부의 고급 슈퍼에 들러 사이좋게 장을 보고 있는 모습이다. "
+            android:textSize="@dimen/small_text_font_size"
+            android:textColor="@color/dft_font_color"
+            android:paddingLeft="15dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingRight="5dp"
+            android:id="@+id/text_content" android:layout_alignLeft="@+id/text_gubun"
+            android:layout_below="@+id/text_title" android:layout_alignRight="@+id/text_title"/>
+    <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="10dp"
+            android:minHeight="300dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:id="@+id/image_attach" android:layout_alignLeft="@+id/text_gubun"
+            android:layout_below="@+id/text_content"
+            android:background="@android:color/black"
+            android:visibility="gone"/>
+    <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:background="@android:color/black"
+            android:id="@+id/image_profile"
+            android:layout_below="@+id/image_attach"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="대한민국토리"
+            android:textColor="@color/dft_font_color"
+            android:textSize="@dimen/default_text_font_size"
+            android:textStyle="bold"
+            android:layout_marginLeft="15dp"
+            android:id="@+id/text_profile_nick" android:layout_toRightOf="@+id/image_profile"
+            android:layout_alignTop="@+id/image_profile"/>
+    <ImageView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/image_level"
+            android:background="@android:color/holo_orange_light"
+            android:layout_toRightOf="@+id/text_profile_nick"
+            android:layout_alignTop="@+id/image_profile" android:layout_alignBottom="@+id/text_profile_nick"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="18시간 전"
+            android:textSize="@dimen/tiny_text_font_size"
+            android:textColor="@color/dft_font_color"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="3dp"
+            android:id="@+id/text_regdate" android:layout_toRightOf="@+id/image_profile"
+            android:layout_below="@+id/text_profile_nick"/>
+    <ImageView
+            android:layout_width="48dp"
+            android:layout_height="24dp"
+            android:id="@+id/image_comment" android:layout_alignRight="@+id/image_like"
+            android:layout_alignBottom="@+id/image_profile"
+            android:background="@android:color/darker_gray" />
+    <ImageView
+            android:layout_width="48dp"
+            android:layout_height="24dp"
+            android:id="@+id/image_share"
+            android:background="@android:color/darker_gray" android:layout_toLeftOf="@+id/image_clip"
+            android:layout_alignBottom="@+id/image_profile"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:background="@android:color/transparent"
+            android:layout_below="@+id/image_profile" />
+
+</RelativeLayout>

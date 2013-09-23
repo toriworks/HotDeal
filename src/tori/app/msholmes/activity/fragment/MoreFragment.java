@@ -66,7 +66,12 @@ public class MoreFragment extends Fragment {
     /** 공지 내용 탬플릿 */
     private String[] arrNoticeDesc;
     /** 공지 내용 중 공유 관련 버튼 */
-    private Button buttonMoreAction;
+    private static Button buttonMoreAction;
+
+
+    // FIXME : 임시
+    private static ImageView imageBanner;
+    private String bannerUrl = "http://cafeskthumb.phinf.naver.net/20130724_138/lks040388_1374626383458WnVTj_JPEG/%B6%F3%C4%ED%C5%D9_%B9%E8%B3%CA.jpg?type=w740";
 
 
     /**
@@ -149,6 +154,14 @@ public class MoreFragment extends Fragment {
         // 공지사항에서 추가 버튼
         buttonMoreAction = (Button) getView().findViewById(R.id.button_more_action);
 
+        // FIXME : 임시
+        imageBanner = (ImageView) getView().findViewById(R.id.image_banner);
+        aQuery.id(imageBanner).image(bannerUrl, true, true);
+
+
+
+
+
         // 클릭 이벤트 처리
         relativeFollowers.setOnClickListener(new ButtonOnClickListener());
         relativeFollowing.setOnClickListener(new ButtonOnClickListener());
@@ -228,6 +241,7 @@ public class MoreFragment extends Fragment {
                     startActivity(followingIntent);
                     getActivity().overridePendingTransition(R.anim.anim_window_in, R.anim.anim_window_out);
                     break;
+                case R.id.button_update_settings:
                 case R.id.relative_profile_settings:
                     // 설정으로 이동 레이아웃 클릭 이벤트
                     Intent settingsIntent = new Intent(getActivity(), SettingsActivity.class);
@@ -238,12 +252,18 @@ public class MoreFragment extends Fragment {
                     // 프로필 진행 퍼센트 클릭 이벤트
                     // TODO : 프로필 진행 퍼센트에 대한 도움말 화면을 보여줌
 
+
+
+
                     break;
                 case R.id.button_close_notice:
                     //  공지사항 레이어 닫기 이벤트
                     relativeProfileNotice.setVisibility(View.GONE);
 
-                    // 닫기 버튼을 클릭하면, 일정 시간 보이지 않도록 함
+                    // TODO : 닫기 버튼을 클릭하면, 일정 시간 보이지 않도록 함
+
+
+
 
                     break;
                 case R.id.button_more_action:

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <!-- 자리잡기용 더미 뷰 -->
+    <View
+            android:id="@+id/view_dummy_top_line"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="0dp"/>
+
+    <!-- 공지사항 레이아웃 -->
+    <RelativeLayout
+            android:id="@+id/relative_notice"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/rounded_corner"
+            android:padding="5dp"
+            android:visibility="gone"><!-- 초기에는 안내창이 보이지 않도록 함 -->
+
+        <Button
+                android:id="@+id/button_close_notice"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/ic_action_content_remove"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_notice_title"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:textColor="@color/dft_font_color"
+                android:textSize="@dimen/large_text_font_size"
+                android:textStyle="bold"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_notice_desc"
+                android:layout_alignLeft="@+id/text_notice_title"
+                android:layout_below="@+id/button_close_notice"
+                android:textColor="@color/dft_light_font_color"
+                android:textSize="@dimen/small_text_font_size"/>
+        <Button
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/button_more_action"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/ic_action_social_share"
+                android:layout_toLeftOf="@+id/button_close_notice"
+                android:layout_centerVertical="true"
+                android:visibility="invisible" />
+    </RelativeLayout>
+
+    <!-- Pull-to-Refresh 뷰 -->
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/pull_refresh_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="3dp"
+            android:scrollbars="none"
+            android:cacheColorHint="#00000000"
+            android:dividerHeight="15dp"
+            android:divider="@null"
+            android:fadingEdge="none"
+            android:listSelector="@android:color/transparent">
+    </com.handmark.pulltorefresh.library.PullToRefreshListView>
+
+</LinearLayout>

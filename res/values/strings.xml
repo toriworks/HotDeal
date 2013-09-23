@@ -20,6 +20,14 @@
         <item>Events</item>
     </string-array>
 
+    <!-- 글쓰기 구분 메뉴 -->
+    <string-array name="write_gubun_menu">
+        <item>Select...</item>
+        <item>Domestic</item>
+        <item>Abroad</item>
+        <item>Q&amp;A</item>
+    </string-array>
+
     <!-- 프로필 공지 메세지 -->
     <string-array name="profile_notice_step">
         <item>프로필 사진이 비었네요.</item>
@@ -32,6 +40,16 @@
         <item>이제 친구들과 함께 핫딜을 해보는건 어때요?</item>
     </string-array>
 
+    <!-- Pull-to-Refhresh -->
+    <string name="pull_to_refresh_pull_label">새로고침하려면 해제하세요.</string>
+    <string name="pull_to_refresh_release_label">새로고침하려면 해제하세요.</string>
+    <string name="pull_to_refresh_refreshing_label">업데이트 중</string>
+
+    <!-- Just use standard Pull Down String when pulling up. These can be set for languages which require it -->
+    <string name="pull_to_refresh_from_bottom_pull_label">@string/pull_to_refresh_pull_label</string>
+    <string name="pull_to_refresh_from_bottom_release_label">@string/pull_to_refresh_release_label</string>
+    <string name="pull_to_refresh_from_bottom_refreshing_label">@string/pull_to_refresh_refreshing_label</string>
+
     <!-- 메인 액티비티 바탕 컬러 -->
     <color name="act_main_bg">#D3D3D3</color>
     <!-- Follow 선택 컬러 -->
@@ -42,4 +60,6 @@
     <color name="dft_light_font_color">#9C9C9C</color>
     <!-- 더보기 텍스트 버튼 배경 -->
     <color name="dft_vmore_bg">#999999</color>
+    <!-- 붉은색 텍스트 폰트 컬러 -->
+    <color name="dft_red_font_color">#E01B5D</color>
 </resources>

@@ -4,6 +4,8 @@ import android.app.Application;
 import android.content.Context;
 import android.telephony.TelephonyManager;
 import android.util.Log;
+import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.Volley;
 import tori.app.msholmes.utils.HCommonUtil;
 import tori.app.msholmes.utils.HContants;
 import tori.app.msholmes.utils.HSharedPreference;
@@ -18,6 +20,9 @@ import java.util.UUID;
  * @since 1.0
  */
 public class UIApplication extends Application {
+
+    /** Volley 사용을 위한 RequestQueue 선언 */
+    private RequestQueue gRequestQueue;
 
     /**
      * Called when the application is starting, before any activity, service,
@@ -53,6 +58,10 @@ public class UIApplication extends Application {
             Log.d("nine", "프로필 등록 단계 1단계로 초기화");
             HSharedPreference.setValue(getApplicationContext(), HContants.SP_PROFILE_STATUS, "1");
         }
+
+
+        // Volley 사용 초기화
+        gRequestQueue = Volley.newRequestQueue(this);
     }
 
     /**
@@ -71,4 +80,14 @@ public class UIApplication extends Application {
 
         return deviceUuid.toString();
     }
+
+    /**
+     * 외부에서 RequestQueue 객체를 얻는다.
+     * <p/>Activity에서 필요한 경우에 app.getRequestQueue()로 얻어서 사용한다.
+     * @return 큐 객체
+     */
+    public RequestQueue getgRequestQueue() {
+        return gRequestQueue;
+    }
+
 }

@@ -208,7 +208,7 @@
                     android:id="@+id/text_profile_percentage"
                     android:layout_width="60dp"
                     android:layout_height="fill_parent"
-                    android:background="#609933CC"
+                    android:background="#90E01B5D"
                     android:gravity="center_vertical"
                     android:paddingLeft="5dp"
                     android:shadowColor="#FF464646"
@@ -222,17 +222,17 @@
             <TextView
                     android:layout_width="60dp"
                     android:layout_height="fill_parent"
-                    android:background="#FFBAFF"/>
+                    android:background="#30E01B5D"/>
 
             <TextView
                     android:layout_width="60dp"
                     android:layout_height="fill_parent"
-                    android:background="#FFBAFF"/>
+                    android:background="#30E01B5D"/>
 
             <TextView
                     android:layout_width="40dp"
                     android:layout_height="fill_parent"
-                    android:background="#FFBAFF"/>
+                    android:background="#30E01B5D"/>
         </LinearLayout>
     </RelativeLayout>
 
@@ -315,11 +315,17 @@
             <RelativeLayout
                     android:id="@+id/relative_profile_settings"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
+                    android:layout_height="120dp"
                     android:layout_margin="5dp"
                     android:background="@drawable/rounded_corner"
                     android:padding="5dp">
 
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:id="@+id/image_banner" android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"/>
             </RelativeLayout>
         </LinearLayout>
     </ScrollView>
